@@ -2,6 +2,15 @@ from sympy import isprime
 import json
 
 
+"""
+Helper script to create a keys.json file with the following structure:
+{
+    'public_key': [e, n],
+    'private_key': [d, n]
+}
+"""
+
+
 def eulers_totient(p, q):
     return (p - 1) * (q - 1)
 
@@ -45,7 +54,8 @@ while True:
 
 # determine n, the modulus for both public and private keys. The bits of n is the key length
 n = n(p, q)
-# 3) phi is Eulers totient function which is the amount of numbers less than n that are coprime with p and q.
+
+# phi is Eulers totient function which is the amount of numbers less than n that are coprime with p and q.
 phi = eulers_totient(p, q)
 
 while True:

@@ -1,5 +1,8 @@
 import json
 
+"""
+Small command-line programm to encrypt or decrypt integer messages
+"""
 
 def encrypt(e, n, message):
     if message > n:
